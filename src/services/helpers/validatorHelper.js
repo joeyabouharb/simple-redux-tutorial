@@ -1,16 +1,24 @@
 
 import * as actions from '../types/types';
-const forbiddenWords = ["spam", "money"];
 
-function validateArticle({ dispatch }) {
+
+function validateArticle({dispatch, getState}) {
+
   return function(next){
     return function(action){
       // do your stuff
       if(action.type === actions.ADD_ARTICLE){
-      const foundWord = forbiddenWords.filter(word =>
-        action.payload.title.includes(word)); 
-        if (foundWord.length) {
-          return dispatch({ type: "FOUND_BAD_WORD" });
+        const title = action.payload.title
+        if (!title.length ||
+          !(/\S/.test(title))) {
+          return dispatch({ type: actions.NO_EMPTY_INPUT});
+        }
+        const articles = getState().articles;
+        const findDuplicate = function(article) {
+          return article.title === action.payload.title;
+        }
+        if(articles.some(findDuplicate)){
+          return dispatch({type: actions.DUPLICATE_INPUT});
         }
       }
      

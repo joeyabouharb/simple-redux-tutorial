@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: "Noto Serif";
 }
 
 .App-logo {
@@ -10,24 +11,25 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 2vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  margin: 1vh;
 }
 
-.App-link {
-  color: #61dafb;
+.App-list{
+  margin: 1vh;
+  background-color: #282c34;
+  color: white;
+  font-display: bold;
+  font-size: 3vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App-form{
+  margin: 4vh;
+  
 }

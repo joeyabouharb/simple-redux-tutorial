@@ -1,8 +1,9 @@
 import React from 'react';
 import { connect } from "react-redux";
 import { deleteArticle } from '../services/actions/index';
+import '../list.css';
 const mapStateToProps = state => {
-  return { articles: state.articles };
+  return { articles: state.articles, err: state.err};
 };
 
 function mapDispatchToProps(dispatch){
@@ -11,20 +12,31 @@ function mapDispatchToProps(dispatch){
   }
 } 
 
-const MapListToDOM = ({ articles, deleteArticle }) => { 
+const MapListToDOM = ({ articles, err, deleteArticle }) => { 
   const onDeleteArticle = (id) => {
     deleteArticle({id})
   };
   return(
-  <ul className="list-group list-group-flush">
+    <div>
+        <div>
+    <p> {err} </p>
+  </div>
+  <ul className="list-group">
     {articles.map(el => (
-      <li className="list-group-item" key={el.id}>
+      <li className="list-item" key={el.id}>
+      <div>
         {el.title}
-          <button onClick={onDeleteArticle.bind(this, el.id)}>Delete</button>
+      </div>
+        
+        <div>
+        <button className="form-button" onClick={onDeleteArticle.bind(this, el.id)}>Delete</button>
+        </div> 
+         
       
       </li>
     ))}
   </ul>
+  </div>
   )
 }
 

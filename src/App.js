@@ -6,14 +6,14 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header>
+        <header className="App-header">
         <h2>Articles</h2>
         </header>
-        <div>
-          <List/>
+        <div className="App-form">
+        <Form/>
         </div>
-        <div>
-          <Form/>
+        <div className="App-list">
+          <List/>
         </div>
       </div>
     );

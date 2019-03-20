@@ -1,4 +1,6 @@
 export const ADD_ARTICLE = "ADD_ARTICLE";
 export const DELETE_ARTICLE = "DELETE_ARTICLE";
 export const EDIT_ARTICLE = "EDIT_ARTICLE";
+export const NO_EMPTY_INPUT = "NO_EMPTY_INPUT";
+export const DUPLICATE_INPUT = "DUPLICATE_INPUT";
 

@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.input-text { 
+  border: solid blanchedalmond 1px;
+  border-radius: 8%;
+  background-color: cornsilk;
+  color: darkslategrey;
+  padding: 10px;
+  margin-left: 10px;
+  font-size: 20px;
+  color: midnightblue;
+  
+}
+
+.form-button {
+  border: solid darkgrey 1px;
+  border-radius: 10%;
+  background-color: teal;
+  padding:10px;
+  font-size: 16px;
+  color: whitesmoke;
+  margin-left: 10px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+}
+

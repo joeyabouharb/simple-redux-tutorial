@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import uuidv1 from "uuid";
 import { addArticle } from '../services/actions/index';
+import '../form.css';
 
 function mapDispatchToProps(dispatch) {
   return {
@@ -38,15 +39,16 @@ class FormArticle extends Component {
         <label htmlFor="title">Title</label>
         <input
           type="text"
-          className="form-control"
+          className="input-text"
           id="title"
           value={title}
           onChange={this.handleChange}
         />
-      </div>
-      <button type="submit" className="btn btn-success btn-lg">
+         <button type="submit" className="form-button">
         SAVE
-      </button>
+         </button>
+      </div>
+     
     </form>
     )
   }
